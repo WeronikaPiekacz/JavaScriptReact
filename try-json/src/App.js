@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import withListLoading from './Components/withListLoading';
 import List from './Components/list';
+import {AiFillGithub} from 'react-icons/ai';
 
 function App() {
   const ListLoading = withListLoading(List);
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className='App'>
       <div className='container'>
-        <h1>My Repositories</h1>
+        <h1>My Repositories <AiFillGithub/></h1>
       </div>
       <div className='repo-container'>
         <ListLoading isLoading={appState.loading} repos={appState.repos} />
